@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Route;
@@ -17,10 +19,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/user', static function (Request $request) {
     return [];
-    
+
 });
 Route::get('health-check', static function () {
-    return response()->json([ 'status' => 'OK', 'timestamp' => Carbon::now() ]);
+    return response()->json(['status' => 'OK', 'timestamp' => Carbon::now()]);
 });
 
 Route::fallback(static function () {
