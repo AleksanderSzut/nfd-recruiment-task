@@ -19,8 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/user', static function (Request $request) {
     return [];
-
 });
+
 Route::get('health-check', static function () {
     return response()->json(['status' => 'OK', 'timestamp' => Carbon::now()]);
 });
