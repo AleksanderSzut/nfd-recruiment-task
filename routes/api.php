@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/user', static function (Request $request) {
+    return [];
+    
+});
+Route::get('health-check', static function () {
+    return response()->json([ 'status' => 'OK', 'timestamp' => Carbon::now() ]);
+});
+
+Route::fallback(static function () {
+    abort(404, 'API resource not found');
 });
