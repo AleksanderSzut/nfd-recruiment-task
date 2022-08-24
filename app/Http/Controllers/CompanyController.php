@@ -1,85 +1,45 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
+use App\Application\Actions\Company\CompanyStoreOrUpdateAction;
+use App\Application\Repository\Company\CompanyRepositoryInterface;
+use App\Http\Requests\CompanyStoreRequest;
 use App\Models\Company;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function index(CompanyRepositoryInterface $repository): JsonResponse
     {
-        //
+        return new JsonResponse($repository->index());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function store(CompanyStoreRequest $request, CompanyStoreOrUpdateAction $action): JsonResponse
     {
-        //
+        return new JsonResponse([$action->execute($request)]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function show(Company $company): JsonResponse
     {
-        //
+        return new JsonResponse([]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Company  $company
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Company $company)
+    public function edit(Company $company): JsonResponse
     {
-        //
+        return new JsonResponse([]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Company  $company
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Company $company)
+    public function update(Request $request, Company $company): JsonResponse
     {
-        //
+        return new JsonResponse([]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Company  $company
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Company $company)
+    public function destroy(Company $company): JsonResponse
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Company  $company
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Company $company)
-    {
-        //
+        return new JsonResponse([]);
     }
 }

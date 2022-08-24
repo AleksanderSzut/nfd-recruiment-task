@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "039c5e0d3d1a01ce3c85b6bafda45c8f",
+    "content-hash": "94dddb181ea3b6f6d1e79be379ced049",
     "packages": [
         {
             "name": "brick/math",
@@ -1696,6 +1696,59 @@
                 }
             ],
             "time": "2022-07-24T11:55:47+00:00"
+        },
+        {
+            "name": "mrcnpdlk/validator",
+            "version": "v0.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrcnpdlk/validator.git",
+                "reference": "b88f4bffe8703c692ddc60d5ab38be4e6b4c129d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrcnpdlk/validator/zipball/b88f4bffe8703c692ddc60d5ab38be4e6b4c129d",
+                "reference": "b88f4bffe8703c692ddc60d5ab38be4e6b4c129d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0",
+                "phpunit/phpunit": "~6.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "mrcnpdlk\\Validator\\": "src/mrcnpdlk/Validator/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcin Pudełek",
+                    "email": "marcin@pudelek.org.pl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Stuff validator",
+            "keywords": [
+                "MAC",
+                "krs",
+                "nip",
+                "pesel",
+                "regon",
+                "validator"
+            ],
+            "support": {
+                "issues": "https://github.com/mrcnpdlk/validator/issues",
+                "source": "https://github.com/mrcnpdlk/validator/tree/master"
+            },
+            "time": "2017-11-09T09:58:34+00:00"
         },
         {
             "name": "nesbot/carbon",

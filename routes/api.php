@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::apiResource('users', \App\Http\Controllers\CompanyController::class);
+Route::apiResource('company', \App\Http\Controllers\CompanyController::class);
 
 Route::get('health-check', static function () {
     return response()->json(['status' => 'OK', 'timestamp' => Carbon::now()]);

@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Repository\Company;
+declare(strict_types=1);
+
+namespace App\Application\Repository\Company;
 
 use App\Models\Company;
 use Illuminate\Support\Collection;
